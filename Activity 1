@@ -1,0 +1,86 @@
+def fibonacci(n):
+    if n <= 0:
+        return 0
+
+    antes = 0
+    actual = 1
+    i = 1
+
+    while i < n:
+        siguiente = antes + actual
+        antes = actual
+        actual = siguiente
+        i = i + 1
+
+    return actual
+
+
+def es_primo(numero):
+    if numero < 2:
+        return 0
+
+    div = 2
+    while div < numero:
+        if numero % div == 0:
+            return 0
+        div = div + 1
+
+    return 1
+
+
+def mostrar_primos(inicio, fin):
+    numero = inicio
+    while numero <= fin:
+        if es_primo(numero):
+            print(numero)
+        numero = numero + 1
+
+
+def suma_intermedios(inicio, fin):
+    suma = 0
+    numero = inicio + 1
+
+    while numero < fin:
+        suma = suma + numero
+        numero = numero + 1
+
+    return suma
+
+def multi(a, b):
+    return a * b
+
+def main():
+    numero = int(input("Ingresa un numero: "))
+
+    if numero > 0:
+        print("El numero es positivo")
+    elif numero < 0:
+        print("El numero es negativo")
+    else:
+        print("El numero es cero")
+
+    posicion = int(input("Ingresa la posicion de Fibonacci que deseas buscar: "))
+
+    resultado = fibonacci(posicion)
+    print(f"El numero de Fibonacci en la posicion {posicion} es: {resultado}")
+
+    num1 = int(input("Ingresa el primer numero: "))
+    num2 = int(input("Ingresa el segundo numero: "))
+
+    if num1 > num2:
+        num1, num2 = num2, num1
+
+    print(f"Primos entre {num1} y {num2}:")
+    mostrar_primos(num1, num2)
+
+    a = int(input("Ingresa el primer numero para la suma: "))
+    b = int(input("Ingresa el segundo numero para la suma: "))
+
+    if a > b:
+        a, b = b, a
+
+    suma = suma_intermedios(a, b)
+    print(f"La suma de los intermedios es: {suma}")
+
+
+main()
