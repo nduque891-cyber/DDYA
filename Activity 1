@@ -46,8 +46,110 @@ def suma_intermedios(inicio, fin):
 
     return suma
 
-def multi(a, b):
-    return a * b
+def operar_numeros():
+    num1 = int(input("Ingresa el primer numero: "))
+    num2 = int(input("Ingresa el segundo numero: "))
+
+    if num1 < 0 and num2 < 0:
+        print("Resultado:", num1 * num2)
+    else:
+        print("Resultado:", num1 + num2)
+
+# ===========================
+# PUNTO 5
+# ===========================
+
+def punto5():
+    num1 = int(input("Ingresa el primer numero: "))
+    num2 = int(input("Ingresa el segundo numero: "))
+
+    if num1 < 0 and num2 < 0:
+        resultado = num1 * num2
+        print("Los dos numeros son negativos.")
+        print("Resultado:", resultado)
+    else:
+        resultado = num1 + num2
+        print("Resultado:", resultado)
+
+
+# ===========================
+# PUNTO 6
+# ===========================
+
+def punto6():
+    numero = int(input("Ingresa un numero: "))
+
+    if numero % 2 == 0:
+        print("El numero es par.")
+        print("Elevado al cubo:", numero ** 3)
+    else:
+        print("El numero es impar.")
+        print("Elevado al cuadrado:", numero ** 2)
+
+
+# ===========================
+# PUNTO 7
+# ===========================
+
+# Para este ejercicio utilizaría mi código de estudiante como dato
+# principal del programa. Con ese código ejecutaría nuevamente las
+# operaciones solicitadas por el profesor para comprobar que cada
+# una de las funciones desarrolladas funciona correctamente.
+# También verificaría que los resultados obtenidos sean los esperados
+# antes de finalizar la ejecución del programa.
+
+
+# ===========================
+# PUNTO 8
+# ===========================
+
+# En este ejercicio utilizaría mi fecha de nacimiento.
+# Primero separaría el día, el mes y el año en variables
+# independientes. Después eliminaría los espacios y uniría
+# los valores para formar un solo número, por ejemplo:
+# 19 de septiembre de 2008 -> 19092008.
+# Finalmente aplicaría el procedimiento solicitado por el
+# profesor utilizando ese nuevo valor.
+
+
+# ===========================
+# PUNTO 9
+# ===========================
+
+def punto9():
+    mes = input("Ingresa el nombre del mes: ").lower()
+
+    vocales = 0
+    consonantes = 0
+
+    i = 0
+
+    while i < len(mes):
+
+        if mes[i] == "a" or mes[i] == "e" or mes[i] == "i" or mes[i] == "o" or mes[i] == "u":
+            vocales = vocales + 1
+        else:
+            consonantes = consonantes + 1
+
+        i = i + 1
+
+    print("Cantidad de vocales:", vocales)
+    print("Cantidad de consonantes:", consonantes)
+
+
+# ===========================
+# PUNTO 10
+# ===========================
+
+# Para este ejercicio pediría al usuario el nombre de un mes.
+# Luego recorrería cada una de sus letras utilizando un ciclo.
+# Compararía cada letra con el abecedario para encontrar su
+# posición correspondiente (A=1, B=2, C=3, ..., Z=26).
+# Finalmente mostraría la posición de cada letra del mes
+# ingresado por el usuario.
+
+
+
 
 def main():
     numero = int(input("Ingresa un numero: "))
@@ -82,5 +184,10 @@ def main():
     suma = suma_intermedios(a, b)
     print(f"La suma de los intermedios es: {suma}")
 
+    punto5()
+    punto6()
+    punto9()
+
 
 main()
+
