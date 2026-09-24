@@ -1,5 +1,3 @@
-Entendido, Georgi. Ajustado para reflejar que el repositorio es una colección de clases prácticas y laboratorios de la materia, totalmente limpio sin numerales ni emojis:
-
 Diseños de Datos y Algoritmos (DDYA)
 
 Bienvenido al repositorio de la asignatura Diseños de Datos y Algoritmos. Este espacio contiene las clases prácticas y laboratorios desarrollados durante el curso, enfocados en el estudio, análisis de complejidad e implementación de estructuras de datos y algoritmos en Python.
